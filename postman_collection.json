@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "42c7314d-0ae1-418e-8569-7f5c3bd38ecf",
+		"name": "Module 1 - Create a Blockchain",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3446817"
+	},
+	"item": [
+		{
+			"name": "Get Chain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{server}}:{{port}}/get_chain",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"get_chain"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Is Valid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{server}}:{{port}}/is_valid",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"is_valid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mine Block",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{server}}:{{port}}/mine_block",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{server}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"mine_block"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
