@@ -105,6 +105,7 @@ def is_valid():
                 'length': len(blockchain.chain)}
     return jsonify(response), 200
 
+if __name__ == '__main__':
+    # run app
+    app.run(port=6000)
 
-# run app
-app.run(host='0.0.0.0', port=6000)
