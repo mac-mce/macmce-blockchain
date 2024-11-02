@@ -107,5 +107,5 @@ def is_valid():
 
 if __name__ == '__main__':
     # run app
-    app.run(port=6000)
+    app.run(port=80)
 
