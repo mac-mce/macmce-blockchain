@@ -106,6 +106,6 @@ def is_valid():
     return jsonify(response), 200
 
 if __name__ == '__main__':
-    # run app
+    # run app on port 80 until containerized
     app.run(port=80)
 
