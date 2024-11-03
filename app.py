@@ -105,7 +105,5 @@ def is_valid():
                 'length': len(blockchain.chain)}
     return jsonify(response), 200
 
-if __name__ == '__main__':
-    # run app on port 80 until containerized
-    app.run(port=80)
-
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=True)

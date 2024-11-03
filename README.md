@@ -2,12 +2,15 @@
 
 ## Depends on
 
-Python 3.9
+Python 3.12
 
-## Usage
+## Run app as a Standalone application
+
+### Start command
+
+```commandline
 python blockchain.py
-
-### Startup
+```
 
 After successful startup, you should see this message:
 
@@ -21,11 +24,31 @@ WARNING: This is a development server. Do not use it in a production deployment.
 Press CTRL+C to quit
 ```
 
-## Supported Actions
+
+## Run app as a Containerized application
+
+
+### Build Docker Image
+
+```commandline
+docker build --tag blockchain-docker .
+```
+
+### Run the Docker Image
+
+This command exposes port 5200 when the app starts, so point your browser at port 5200.
+
+```commandline
+docker run -d -p 5200:5000 blockchain-docker
+```
+
+## Using the Blockchain application
+
+### Supported Actions
 
 Three actions are supported:
 
-### GET /mine_block
+#### GET /mine_block
 
 Example:
 {{protocol}}://{{server}}:{{port}}/mine_block
@@ -40,7 +63,7 @@ Response:
     "timestamp": "2024-10-30 20:51:37.855979"
 }
 ```
-### GET /get_chain
+#### GET /get_chain
 
 Example:
 {{protocol}}://{{server}}:{{port}}/get_chain
@@ -64,7 +87,7 @@ Example:
     "length": 2
 }
 ```
-### GET /is_valid
+#### GET /is_valid
 
 Example:
 {{protocol}}://{{server}}:{{port}}/is_valid
