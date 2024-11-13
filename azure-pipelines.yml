@@ -1,4 +1,5 @@
 # Docker
+
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
@@ -27,3 +28,11 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: AzureWebApp@1
+      inputs:
+        azureSubscription: 'nwalcertified(3010671d-c3ec-44b3-8d74-eaf82516b825)'
+        appType: 'webAppLinux'
+        appName: 'macmce-blockchain'
+        package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+        runtimeStack: 'PYTHON|3.11'
+        startUpCommand: 'python app.py'
